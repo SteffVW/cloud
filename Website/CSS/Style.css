@@ -1,0 +1,493 @@
+/*tekst stijlen*/
+p,
+h2,
+h3 {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    font-size: large;
+    color: white;
+}
+
+h1 {
+    font-family: 'Pixelify Sans', cursive;
+}
+
+a {
+    color: white;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+form {
+    font-family: 'Pixelify Sans', cursive;
+}
+
+li {
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+figcaption,
+legend {
+    font-family: 'Pixelify Sans', cursive;
+    color: white;
+}
+
+/*fotos*/
+.product,
+.gamefoto {
+    border: 3px solid black;
+    height: 150px;
+    width: 120px;
+    border-radius: 15px 15px 15px 15px;
+}
+
+
+.klantenfoto {
+    height: auto;
+    border: 10px groove #363CBF;
+    border-radius: 50%;
+
+}
+
+#logo {
+    border: 3px solid black;
+    height: 150px;
+    width: auto;
+    grid-area: logo;
+    border-radius: 0px 0px 0px 50px;
+    border-top: none;
+}
+
+#portrait {
+    text-align: center;
+    grid-area: foto;
+    width: 20%;
+    border: 2px double black;
+    border-radius: 15px 15px 15px 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Productfoto {
+    height: auto;
+    width: 30%;
+    border: 10px groove #363CBF;
+}
+
+/* algemene grid*/
+body {
+    display: grid;
+    grid-template-areas: 'header'
+        'main'
+        'footer';
+}
+
+/*header / navbar / footer / main*/
+header {
+    background-color: #9407F2;
+    border: 3px solid black;
+    border-bottom: none;
+    grid-template-columns: 90% 10%;
+    display: grid;
+    grid-template-areas: 'heading logo'
+        'navbar navbar';
+    text-align: center;
+    grid-area: header;
+}
+
+header>h1 {
+    padding-left: 150px;
+    grid-area: heading;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+nav {
+    background-color: #363CBF;
+    font-size: large;
+    grid-area: navbar;
+    text-align: center;
+    border: 3px solid black;
+    border-right: none;
+    border-left: none;
+
+}
+
+nav>p {
+    display: inline;
+    padding: 5px;
+}
+
+#zoekbalk {
+    margin-top: 0.5rem;
+    font-size: small;
+}
+
+#zoekknop {
+    border: 3px outset #363CBF;
+    background: #363CBF;
+    padding: 0.3rem;
+    border-radius: 15px 15px 15px 15px;
+    margin: 0.5rem;
+    font-size: small;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #9407F2;
+    border: 3px solid black;
+}
+
+footer>p {
+    padding: 10px;
+}
+
+footer>h2 {
+    padding: 10px;
+}
+
+main {
+    grid-area: main;
+}
+
+/*home*/
+
+#home {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    grid-template-areas: 'korting bestsellers nieuws'
+}
+
+#korting {
+    background-color: #363CBF;
+    grid-area: korting;
+    text-align: center;
+    padding: 1rem;
+}
+
+#prijs {
+    text-decoration: line-through;
+}
+
+#nieuws {
+    background-color: #363CBF;
+    grid-area: nieuws;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    padding: 1rem;
+}
+
+#hoofdingbestsellers {
+    padding: 10px;
+    text-align: center;
+    font-size: xx-large;
+    grid-area: hoofding;
+}
+
+#bestsellers {
+    text-align: center;
+    display: grid;
+    grid-template-areas: 'hoofding hoofding hoofding';
+    justify-content: space-around;
+    font-size: larger;
+    border: 3px inset #363CBF;
+    background-color: #040DBF;
+    padding: 1rem;
+    grid-area: bestsellers;
+}
+
+.bestseller {
+    border: 5px groove #363CBF;
+    padding: 5px;
+    background-color: #363CBF;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 15px 15px 15px 15px;
+}
+
+/*about section*/
+#about {
+    display: grid;
+    grid-template-areas: 'abouthoofding abouthoofding abouthoofding'
+        'foto foto foto'
+        'p1 p2 p3';
+    background-color: #363CBF;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#about>h1 {
+    grid-area: abouthoofding;
+    text-align: center;
+    font-size: xx-large;
+}
+
+#p1,
+#p2,
+#p3 {
+    border: 2px double black;
+    padding: 10px;
+    margin: 10px;
+    color: white;
+    background-color: #363CBF;
+    box-shadow: 2px 2px 2px black;
+    border-radius: 15px 15px 15px 15px;
+    height: fit-content;
+}
+
+#p1 {
+    grid-area: p1;
+}
+
+#p2 {
+    grid-area: p2;
+}
+
+#p3 {
+    grid-area: p3;
+}
+
+/*contact*/
+#Contact {
+    text-align: center;
+    background-color: #040DBF;
+    color: white;
+    border: 10px groove #040DBF;
+    overflow-y: auto;
+}
+
+#contacttitel {
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+#kaart {
+    height: 30vh;
+    width: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type=text],
+input[type=email] {
+    border: 2px solid white;
+    border-radius: 4px;
+}
+
+textarea {
+    border: 2px solid white;
+    border-radius: 4px;
+    max-width: 50%;
+}
+
+input[type=submit] {
+    border: 2px groove white;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    color: black;
+    background-color: white;
+}
+
+/*klanten*/
+
+#klanten {
+    padding: 10px;
+    background-color: #040DBF;
+    color: white;
+}
+
+.klantContainer {
+    width: inherit;
+}
+
+#klantenrijen {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 30%;
+    gap: 1rem;
+}
+
+/*klantencontainer en gamecontainer*/
+
+.klantContainer,
+.gamecontainer {
+    padding: 5px;
+    border: 5px groove #363CBF;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 2px 2px 2px black;
+    margin-bottom: 10px;
+    background-color: #363CBF;
+    text-align: center;
+    width: inherit;
+}
+
+/*shop*/
+#Shop {
+    padding: 10px;
+    background-color: #040DBF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+#rijen {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 50%;
+    column-gap: 5rem;
+    justify-content: space-evenly;
+    margin-left: 10rem;
+}
+
+.gamecontainer {
+    width: 20%;
+}
+
+#cart {
+    border: 10px groove #040DBF;
+    height: fit-content;
+    background-color: #363CBF;
+    text-align: center;
+    text-shadow: 2px 2px 2px black;
+    padding: 1rem;
+    width: 15%;
+}
+
+.button {
+    border: 3px outset #363CBF;
+    background: #363CBF;
+    padding: 0.3rem;
+    border-radius: 15px 15px 15px 15px;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+}
+
+.button:active {
+    background-color: green;
+}
+
+/*product*/
+
+.Product {
+    background-color: #040DBF;
+    text-align: center;
+    padding: 10px;
+    border: 10px groove #363CBF;
+    overflow-y: auto;
+}
+
+.Product>h1 {
+    font-size: xx-large;
+    color: white;
+}
+
+button {
+    border: 2px groove white;
+    color: black;
+    background-color: white;
+}
+
+button:active {
+    background-color: #363CBF;
+}
+
+/* media */
+@media only screen and (max-width: 1200px) {
+
+    #bestsellers,
+    #nieuws,
+    #korting {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+
+    header {
+        grid-template-columns: 80% auto;
+    }
+
+    #logo {
+        height: auto;
+        width: auto;
+    }
+
+    #home {
+        grid-template-areas:
+            'korting korting'
+            'nieuws nieuws'
+            'bestsellers bestsellers'
+            'about about'
+            'footer footer';
+    }
+
+    article {
+        border-top: 2px groove #363CBF;
+        border-bottom: 2px groove #363CBF;
+    }
+
+    .gamecontainer {
+        width: auto;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+
+    #about {
+        grid-template-areas: 'abouthoofding'
+            'foto'
+            'p1'
+            'p2'
+            'p3';
+    }
+
+    #portrait {
+        width: 40%;
+    }
+
+    header>h1 {
+        padding-left: 4rem;
+    }
+
+    #bestsellers {
+        display: block;
+    }
+
+    #Shop {
+        display: block;
+    }
+
+    #cart {
+        width: 15rem;
+        margin-bottom: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .klantContainer {
+        width: auto;
+    }
+
+    #kaart {
+        width: 15rem;
+    }
+
+    .bestseller {
+        width: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0.5rem;
+    }
+
+    #rijen {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

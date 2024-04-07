@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Sofia+Sans+Condensed:wght@200&family=Titillium+Web:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/Style.css  ">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark souls 2</title>
+    <script src="js/wishlist.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welkom op Computer Games. <br> Niveau omhoog, games binnen handbereik!</h1>
+        <img src="Assets/images/logo.png" alt="logo" id="logo">
+        <nav>
+            <a href="index.html">Home</a>
+            <p>-</p>
+            <a href="shop.html">Shop</a>
+            <p>-</p>
+            <a href="contact.html">Contact</a>
+            <p>-</p>
+            <a href="klanten.html">Klanten</a>
+            <form action="#">
+                <label for="zoekbalk"></label>
+                <input type="text" name="zoekbalk" id="zoekbalk" placeholder="zoeken">
+                <label for="button"></label>
+                <input type="submit" value="zoeken" id="zoekknop">
+            </form>
+        </nav>
+    </header>
+    <main class="Product">
+        <h1>Dark souls 2</h1>
+        <h2 id="wishlistText"></h2>
+        <figure><img src="Assets/images/DarkSouls2.jpg" alt="DarkSouls2" class="Productfoto"></figure>
+        <figcaption>Bron: rpgfan.com</figcaption><br>
+        <ul>
+            <li>
+                <h2>prijs: 35€</h2>
+            </li>
+            <li>
+                <h2>genre: Action - Adventure</h2>
+            </li>
+            <li>
+                <h2>developer: FromSoftware</h2>
+            </li>
+        </ul>
+        <br><button id="wishlist">Wishlist!</button><br>
+        <br>
+        <fieldset>
+            <legend>Laat een review achter!</legend>
+            <section>
+                <form action="#" method="get">
+                    <label for="username"></label><br>
+                    <br><input type="text" name="username" id="username" placeholder="Naam"><br>
+                    <br><label for="email"></label><br>
+                    <br><input type="email" name="e-mail" id="email" placeholder="e-mail"><br>
+                    <br><label for="bericht"></label><br>
+                    <br><textarea name="bericht" id="bericht" cols="100" rows="6" placeholder="Recensie"></textarea><br>
+                    <br><input type="submit" name="submit" id="submit">
+        </fieldset>
+        </form>
+        </section>
+    </main>
+    <footer>
+        <h2>Gemaakt door:<br>Steff Van Weereld</h2>
+        <p>bedankt om een kijkje te nemen</p>
+    </footer>
+
+</body>
+
+</html>
