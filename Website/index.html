@@ -119,6 +119,20 @@
         <h2>Gemaakt door:<br>Steff Van Weereld</h2>
         <p>bedankt om een kijkje te nemen.</p>
     </footer>
+    <script>
+        // Function to send a request to record visit date
+        function recordVisit(){
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "record_visit.php", true);
+            xhr.send();
+        }
+
+        // Call the function when page loads
+        window.onload = function() {
+            recordVisit();
+        };
+    </script>
+
 </body>
 
 </html>
