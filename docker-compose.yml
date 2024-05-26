@@ -4,6 +4,8 @@ services:
   web:
     build: .
     container_name: cloud_opdracht
+    networks:
+      - cloud_opdracht
     ports:
       - "8081:80"
     volumes:
