@@ -6,7 +6,7 @@ services:
     volumes:
       - ./website:/var/www/html
     ports:
-      - "30:30"
+      - "80:30"
     depends_on:
       - db
 
