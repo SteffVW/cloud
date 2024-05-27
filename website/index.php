@@ -27,10 +27,12 @@ $current_time = date("Y-m-d H:i:s");
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
-CREATE TABLE IF NOT EXISTS visitors (
+$sql = "CREATE TABLE IF NOT EXISTS visitors (
     id INT AUTO_INCREMENT PRIMARY KEY,
     visited TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+)";
+
+$mysqli->query($sql);
 
 $stmt = $mysqli->prepare("INSERT INTO visitors (visited) VALUES (?)");
 $stmt->bind_param("s", $current_time);
@@ -41,6 +43,7 @@ $stmt->close();
 $mysqli->close();
 
 ?>
+
     <header>
         <h1>Welkom op Computer Games. <br> Niveau omhoog, games binnen handbereik!</h1>
         <img src="/Assets/images/logo.png" alt="logo" id="logo">
