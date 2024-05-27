@@ -15,6 +15,32 @@
 </head>
 
 <body>
+<?php
+
+$servername = "db";
+$username = "root";
+$password = "root";
+$dbname = "cloud_visits";
+
+date_default_timezone_set('Europe/Brussels');
+$current_time = date("Y-m-d H:i:s");
+
+$mysqli = new mysqli($servername, $username, $password, $dbname);
+
+CREATE TABLE IF NOT EXISTS visitors (
+    id INT_AUTO_INCREMENT PRIMARY KEY,
+    visited TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+$stmt = $mysqli->prepare("INSERT INTO visitors (visited) VALUES (?)");
+$stmt->bind_param("s", $current_time);
+
+$stmt->execute();
+
+$stmt->close();
+$mysqli->close();
+
+?>
     <header>
         <h1>Welkom op Computer Games. <br> Niveau omhoog, games binnen handbereik!</h1>
         <img src="/Assets/images/logo.png" alt="logo" id="logo">
