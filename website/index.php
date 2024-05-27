@@ -28,7 +28,7 @@ $current_time = date("Y-m-d H:i:s");
 $mysqli = new mysqli($servername, $username, $password, $dbname);
 
 CREATE TABLE IF NOT EXISTS visitors (
-    id INT_AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     visited TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
