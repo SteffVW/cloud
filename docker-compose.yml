@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    image: steffvw/app:latest
     container_name: cloud_opdracht
     ports:
       - "8081:80"
